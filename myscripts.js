@@ -1,5 +1,12 @@
-let playerOne = 'playerOne'
-let playerTwo = 'playerTwo'
+let playerOne = 'Player One'
+let playerTwo = 'Player Two'
+
+function returnPlayerNames(){
+    playerOne = document.getElementById("playerOneName").value;
+    playerTwo = document.getElementById("playerTwoName").value;
+    currentMove = playerOne;
+}
+
 let currentMove = playerOne;
 
 const btn1 = document.querySelector('#one');
@@ -164,23 +171,57 @@ btn9.addEventListener('click', () => {
         currentMove = playerOne;
     };})
 
+const reset = document.querySelector('#resetButton');
+reset.addEventListener('click', () => {
+    document.getElementById("one").disabled = false;
+    document.getElementById("two").disabled = false;
+    document.getElementById("three").disabled = false;
+    document.getElementById("four").disabled = false;
+    document.getElementById("five").disabled = false;
+    document.getElementById("six").disabled = false;
+    document.getElementById("seven").disabled = false;
+    document.getElementById("eight").disabled = false;
+    document.getElementById("nine").disabled = false;
+    const one = document.getElementById('one')
+    one.innerHTML = '';
+    const two = document.getElementById('two')
+    two.innerHTML = '';
+    const three = document.getElementById('three')
+    three.innerHTML = '';
+    const four = document.getElementById('four')
+    four.innerHTML = '';
+    const five = document.getElementById('five')
+    five.innerHTML = '';
+    const six = document.getElementById('six')
+    six.innerHTML = '';
+    const seven = document.getElementById('seven')
+    seven.innerHTML = '';
+    const eight = document.getElementById('eight')
+    eight.innerHTML = '';
+    const nine = document.getElementById('nine')
+    nine.innerHTML = '';
+    const winnerStatement = document.getElementById('winner');
+    winnerStatement.innerHTML = '';
+}
+)
+
 function checkWinnerOne() {
     if (document.getElementById('one').textContent == document.getElementById('two').textContent && document.getElementById('one').textContent == document.getElementById('three').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('one').textContent == document.getElementById('four').textContent && document.getElementById('one').textContent == document.getElementById('seven').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('one').textContent == document.getElementById('five').textContent && document.getElementById('one').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -190,13 +231,13 @@ function checkWinnerTwo() {
     if (document.getElementById('one').textContent == document.getElementById('two').textContent && document.getElementById('one').textContent == document.getElementById('three').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('two').textContent == document.getElementById('five').textContent && document.getElementById('two').textContent == document.getElementById('eight').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -206,19 +247,19 @@ function checkWinnerThree() {
     if (document.getElementById('one').textContent == document.getElementById('two').textContent && document.getElementById('one').textContent == document.getElementById('three').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('three').textContent == document.getElementById('six').textContent && document.getElementById('three').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('three').textContent == document.getElementById('five').textContent && document.getElementById('three').textContent == document.getElementById('seven').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -228,13 +269,13 @@ function checkWinnerFour() {
     if (document.getElementById('four').textContent == document.getElementById('five').textContent && document.getElementById('four').textContent == document.getElementById('six').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('one').textContent == document.getElementById('four').textContent && document.getElementById('one').textContent == document.getElementById('seven').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -244,19 +285,19 @@ function checkWinnerFive() {
     if (document.getElementById('four').textContent == document.getElementById('five').textContent && document.getElementById('four').textContent == document.getElementById('six').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('two').textContent == document.getElementById('five').textContent && document.getElementById('two').textContent == document.getElementById('eight').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('one').textContent == document.getElementById('five').textContent && document.getElementById('one').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -266,13 +307,13 @@ function checkWinnerSix() {
     if (document.getElementById('four').textContent == document.getElementById('five').textContent && document.getElementById('four').textContent == document.getElementById('six').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('three').textContent == document.getElementById('six').textContent && document.getElementById('three').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -282,19 +323,19 @@ function checkWinnerSeven() {
     if (document.getElementById('one').textContent == document.getElementById('four').textContent && document.getElementById('one').textContent == document.getElementById('seven').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('seven').textContent == document.getElementById('eight').textContent && document.getElementById('seven').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('three').textContent == document.getElementById('five').textContent && document.getElementById('three').textContent == document.getElementById('seven').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -304,13 +345,13 @@ function checkWinnerEight() {
     if (document.getElementById('two').textContent == document.getElementById('five').textContent && document.getElementById('two').textContent == document.getElementById('eight').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('seven').textContent == document.getElementById('eight').textContent && document.getElementById('seven').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };
@@ -320,19 +361,19 @@ function checkWinnerNine() {
     if (document.getElementById('seven').textContent == document.getElementById('eight').textContent && document.getElementById('seven').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('three').textContent == document.getElementById('six').textContent && document.getElementById('three').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     } else if (document.getElementById('one').textContent == document.getElementById('five').textContent && document.getElementById('one').textContent == document.getElementById('nine').textContent) {
         const winner = document.querySelector('#winner');
         const statement = document.createElement('p');
-        statement.textContent = `Congradulations ${currentMove}, you win the game!`;
+        statement.textContent = `Congratulations ${currentMove}, you win the game!`;
         winner.appendChild(statement);
         disableAll();
     };

@@ -4,6 +4,12 @@
         <link rel="stylesheet" type="text/css" href="mystyles.css" />
     </head>
     <body>
+        <input id="playerOneName" type="text" placeholder="Player One's Name">
+        <input id="playerTwoName" type="text" placeholder="Player Two's Name">
+        <button type="submit" onclick="returnPlayerNames()">Submit</button>
+        <br>
+    
+        <button class="resetButton" id="resetButton">Reset Game</button><br>
         <div class='wrapper'>
             <button class="one" id='one'></button>
             <button class="two" id='two'></button>
@@ -16,7 +22,7 @@
             <button class="nine" id='nine'></button>
         </div>
         <div class="winner" id="winner">
-            
+
         </div>
         <script type="text/javascript" src="myscripts.js"></script>
     </body>
