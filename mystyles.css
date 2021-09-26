@@ -1,4 +1,138 @@
-p {
-    color: blue;
-    font-size: 50px;
+.one {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.two {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.three {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.four {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.five {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.one {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.six {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.seven {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.eight {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.nine {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-areas:
+    "one two three"
+    "four five six"
+    "seven eight nine";
 }
