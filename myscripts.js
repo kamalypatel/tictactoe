@@ -23,6 +23,8 @@ function returnPlayerNames(){
     playerTwoScoreKeep.textContent = `${playerTwo}'s Score: ${playerTwoScore}`;
     score.appendChild(playerOneScoreKeep);
     score.appendChild(playerTwoScoreKeep);
+    const nameSetter = document.getElementById('nameSetter');
+    nameSetter.innerHTML = '';
 }
 
 let currentMove = playerOne;
@@ -570,11 +572,3 @@ function playerTwoScores() {
     score.appendChild(playerOneScoreKeep);
     score.appendChild(playerTwoScoreKeep);
 }
-
-/*
-if (currentMove == playerOne) {
-    playerOneScores();
-    currentMove = playerTwo;
-} else if (currentMove == playerTwo) {
-    playerTwoScores();
-} */
