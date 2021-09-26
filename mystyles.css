@@ -128,13 +128,24 @@
     border: 2px solid black;
 }
 
+.other {
+    margin: 15px;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
     grid-template-areas:
     "one two three"
     "four five six"
     "seven eight nine";
+}
+
+.fullWrap {
+    display: grid;
+    grid-template-columns: 300px 600px;
+    grid-template-areas: "wrapper other"
 }
 
 .resetButton {
@@ -145,4 +156,9 @@
     color: white;
     font-size: 18px;
     border-radius: 20px;
+}
+
+.winner {
+    font-size: 40px;
+    color: green;
 }
