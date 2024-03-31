@@ -12,8 +12,10 @@ const runGame = ( () => {
         let score = 0
         const getPlayerOneScore = () => score;
         const addPlayerOneScore = () => score++
+
+        let marker = 'X'
         
-        return { name, getPlayerOneScore, addPlayerOneScore }
+        return { name, getPlayerOneScore, addPlayerOneScore, marker}
     }
 
     const createPlayerTwo = (name) => {
@@ -21,7 +23,9 @@ const runGame = ( () => {
         const getPlayerTwoScore = () => score;
         const addPlayerTwoScore = () => score++
         
-        return { name, getPlayerTwoScore, addPlayerTwoScore }
+        let marker = 'X'
+
+        return { name, getPlayerTwoScore, addPlayerTwoScore, marker }
     }
 
 
@@ -31,11 +35,8 @@ const runGame = ( () => {
 
 runGame.createGameBoard()
 
-const kamal = runGame.createPlayer('kamal')
-kamal.addPlayerScore()
-kamal.addPlayerScore()
-kamal.addPlayerScore()
-kamal.addPlayerScore()
+const playerOne = runGame.createPlayerOne(prompt("what's player 1's name?"))
+console.log(playerOne.name)
 
-
-console.log(kamal.getPlayerScore())
+const playerTwo = runGame.createPlayerOne(prompt("what's player 2's name?"))
+console.log(playerTwo.name)
