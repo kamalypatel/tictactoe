@@ -122,7 +122,9 @@ const runGame = ( () => {
                 console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
             }
         } else {
-            
+            if (currentTurn == 10) {
+                console.log('No Winner Found')
+            }
         }
     }
 
