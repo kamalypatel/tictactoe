@@ -8,7 +8,34 @@ const runGame = ( () => {
             gameContainer.appendChild(gameSquare)
         }
     }
-    return { createGameBoard };
+    const createPlayerOne = (name) => {
+        let score = 0
+        const getPlayerOneScore = () => score;
+        const addPlayerOneScore = () => score++
+        
+        return { name, getPlayerOneScore, addPlayerOneScore }
+    }
+
+    const createPlayerTwo = (name) => {
+        let score = 0
+        const getPlayerTwoScore = () => score;
+        const addPlayerTwoScore = () => score++
+        
+        return { name, getPlayerTwoScore, addPlayerTwoScore }
+    }
+
+
+
+    return { createGameBoard, createPlayerOne, createPlayerTwo}
 })();
 
 runGame.createGameBoard()
+
+const kamal = runGame.createPlayer('kamal')
+kamal.addPlayerScore()
+kamal.addPlayerScore()
+kamal.addPlayerScore()
+kamal.addPlayerScore()
+
+
+console.log(kamal.getPlayerScore())
