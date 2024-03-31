@@ -47,19 +47,82 @@ const runGame = ( () => {
     }
 
     let playerWins = false
-    
+
     const checkScore = () => {
-        if (currentTurn >= 6) {
-            if (document.getElementById('1').innerText == document.getElementById('2').innerText && document.getElementById('2').innerText == document.getElementById('3').innerText) {
-                playerWins = true
-                if (document.getElementById('1').innerText == 'X') {
-                    playerOne.addPlayerOneScore()
-                    console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
-                } else {
-                    playerTwo.addPlayerTwoScore()
-                    console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
-                }
+        if (document.getElementById('1').innerText !== '' && document.getElementById('1').innerText == document.getElementById('2').innerText && document.getElementById('2').innerText == document.getElementById('3').innerText) {
+            playerWins = true
+            if (document.getElementById('1').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
             }
+        } else if (document.getElementById('4').innerText !== '' && document.getElementById('4').innerText == document.getElementById('5').innerText && document.getElementById('5').innerText == document.getElementById('6').innerText) {
+            playerWins = true
+            if (document.getElementById('4').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else if (document.getElementById('7').innerText !== '' && document.getElementById('7').innerText == document.getElementById('8').innerText && document.getElementById('8').innerText == document.getElementById('9').innerText) {
+            playerWins = true
+            if (document.getElementById('7').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else if (document.getElementById('1').innerText !== '' && document.getElementById('1').innerText == document.getElementById('4').innerText && document.getElementById('4').innerText == document.getElementById('7').innerText) {
+            playerWins = true
+            if (document.getElementById('1').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else if (document.getElementById('2').innerText !== '' && document.getElementById('2').innerText == document.getElementById('5').innerText && document.getElementById('5').innerText == document.getElementById('8').innerText) {
+            playerWins = true
+            if (document.getElementById('2').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else if (document.getElementById('3').innerText !== '' && document.getElementById('3').innerText == document.getElementById('6').innerText && document.getElementById('6').innerText == document.getElementById('9').innerText) {
+            playerWins = true
+            if (document.getElementById('3').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else if (document.getElementById('1').innerText !== '' && document.getElementById('1').innerText == document.getElementById('5').innerText && document.getElementById('5').innerText == document.getElementById('9').innerText) {
+            playerWins = true
+            if (document.getElementById('1').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else if (document.getElementById('3').innerText !== '' && document.getElementById('3').innerText == document.getElementById('5').innerText && document.getElementById('5').innerText == document.getElementById('7').innerText) {
+            playerWins = true
+            if (document.getElementById('3').innerText == 'X') {
+                playerOne.addPlayerOneScore()
+                console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+            } else {
+                playerTwo.addPlayerTwoScore()
+                console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+            }
+        } else {
+            
         }
     }
 
