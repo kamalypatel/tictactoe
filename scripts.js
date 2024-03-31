@@ -5,6 +5,9 @@ const runGame = ( () => {
             const gameSquare = document.createElement('div')
             gameSquare.classList.add('gameSquare')
             gameSquare.setAttribute('id', i.toString())
+            gameSquare.addEventListener('click', () => {
+                gameSquare.innerText = playGame()
+            })
             gameContainer.appendChild(gameSquare)
         }
     }
@@ -23,20 +26,32 @@ const runGame = ( () => {
         const getPlayerTwoScore = () => score;
         const addPlayerTwoScore = () => score++
         
-        let marker = 'X'
+        let marker = 'O'
 
         return { name, getPlayerTwoScore, addPlayerTwoScore, marker }
     }
 
-
+    let currentTurn = 1;
+    
+    const playGame = () => {
+        if (currentTurn % 2 != 0) {
+            currentTurn++
+            return playerOne.marker
+        } else {
+            currentTurn++
+            return playerTwo.marker
+        }
+    }
 
     return { createGameBoard, createPlayerOne, createPlayerTwo}
 })();
 
-runGame.createGameBoard()
-
 const playerOne = runGame.createPlayerOne(prompt("what's player 1's name?"))
 console.log(playerOne.name)
 
-const playerTwo = runGame.createPlayerOne(prompt("what's player 2's name?"))
+const playerTwo = runGame.createPlayerTwo(prompt("what's player 2's name?"))
 console.log(playerTwo.name)
+
+runGame.createGameBoard()
+
+console.log(playerTwo.marker)
