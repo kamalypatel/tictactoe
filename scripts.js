@@ -13,6 +13,17 @@ const runGame = ( () => {
             })
             gameContainer.appendChild(gameSquare)
         }
+
+        const body = document.querySelector('body')
+        const resetButton = document.createElement('button')
+        resetButton.setAttribute('type','button')
+        resetButton.classList.add('resetButton')
+        resetButton.innerText = 'Reset Game'
+        resetButton.addEventListener('click', () => {
+            resetGame()
+        })
+        
+        body.appendChild(resetButton)
     }
     const createPlayerOne = (name) => {
         let score = 0
@@ -125,6 +136,30 @@ const runGame = ( () => {
             if (currentTurn == 10) {
                 console.log('No Winner Found')
             }
+        }
+    }
+
+    const resetGame = () => {
+        
+        const cells = document.querySelectorAll('.gameSquare')
+        cells.forEach(cell => {
+            cell.remove()
+        })
+        currentTurn = 1
+        playerWins = false
+
+        for (let i = 1; i <= 9; i++) {
+            const gameContainer = document.querySelector('.gameContainer')
+            const gameSquare = document.createElement('div')
+            gameSquare.classList.add('gameSquare')
+            gameSquare.setAttribute('id', i.toString())
+            gameSquare.addEventListener('click', () => {
+                if (gameSquare.innerText == '' && playerWins == false) {
+                    gameSquare.innerText = playGame()
+                    checkScore()
+                }
+            })
+            gameContainer.appendChild(gameSquare)
         }
     }
 

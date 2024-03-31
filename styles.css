@@ -18,3 +18,12 @@
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.resetButton {
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
