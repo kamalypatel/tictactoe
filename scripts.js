@@ -6,7 +6,9 @@ const runGame = ( () => {
             gameSquare.classList.add('gameSquare')
             gameSquare.setAttribute('id', i.toString())
             gameSquare.addEventListener('click', () => {
-                gameSquare.innerText = playGame()
+                if (gameSquare.innerText == '') {
+                    gameSquare.innerText = playGame()
+                }
             })
             gameContainer.appendChild(gameSquare)
         }
@@ -53,5 +55,3 @@ const playerTwo = runGame.createPlayerTwo(prompt("what's player 2's name?"))
 console.log(playerTwo.name)
 
 runGame.createGameBoard()
-
-console.log(playerTwo.marker)
