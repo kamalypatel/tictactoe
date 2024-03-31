@@ -6,8 +6,9 @@ const runGame = ( () => {
             gameSquare.classList.add('gameSquare')
             gameSquare.setAttribute('id', i.toString())
             gameSquare.addEventListener('click', () => {
-                if (gameSquare.innerText == '') {
+                if (gameSquare.innerText == '' && playerWins == false) {
                     gameSquare.innerText = playGame()
+                    checkScore()
                 }
             })
             gameContainer.appendChild(gameSquare)
@@ -42,6 +43,23 @@ const runGame = ( () => {
         } else {
             currentTurn++
             return playerTwo.marker
+        }
+    }
+
+    let playerWins = false
+    
+    const checkScore = () => {
+        if (currentTurn >= 6) {
+            if (document.getElementById('1').innerText == document.getElementById('2').innerText && document.getElementById('2').innerText == document.getElementById('3').innerText) {
+                playerWins = true
+                if (document.getElementById('1').innerText == 'X') {
+                    playerOne.addPlayerOneScore()
+                    console.log(`Player One's score is now ${playerOne.getPlayerOneScore()}`)
+                } else {
+                    playerTwo.addPlayerTwoScore()
+                    console.log(`Player Two's score is now ${playerTwo.getPlayerTwoScore()}`)
+                }
+            }
         }
     }
 
