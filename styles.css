@@ -1,0 +1,14 @@
+.gameContainer {
+    width: 306px;
+    height: 306px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gameSquare {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
